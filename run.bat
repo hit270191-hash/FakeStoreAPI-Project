@@ -2,7 +2,7 @@
 :: ====================================================
 :: [Constants / Paths]
 :: ====================================================
-set ALLURE_RESULTS=reports\allure-results
+set ALLURE_RESULTS=allure-results
 set ALLURE_HTML=reports\allure-html
 set PYTEST_HTML=reports\report.html
 
@@ -49,8 +49,4 @@ pytest -s -v ^
 --html=%PYTEST_HTML% --self-contained-html ^
 testCases/
 
-:: ====================================================
-:: Step 7: Generate Allure report
-:: ====================================================
-echo Generating Allure report...
-allure generate %ALLURE_RESULTS% -o %ALLURE_HTML% --clean
+
